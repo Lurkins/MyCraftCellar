@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dash-styles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    <title>MyCraftCellar</title>
+  </head>
+  <body class="dashboard-body">
+    <!-- nav bar -->
+    <nav class="navbar navbar-dark">
+        <a class="navbar-brand" href="/">My<span class="text-warning">Craft</span>Cellar<i class="fas fa-beer logo text-warning ml-2"></i></a>
+        <button class="navbar-toggler mb-2 mb-sm-0 border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+            <a href="/logout" class="btn btn-outline-warning mt-2" role="button">Logout</a>
+        </div>
+    </nav>
+    <!-- <div class="container my-5 text-center">
+      <h1 class="text-white d-inline display-2">My<span class="text-warning">Craft</span>Cellar</h1><i class="fas fa-beer logo-lg text-warning ml-2"></i>
+    </div> -->
+    <div class="container rounded py-5">
+      <div class="row mb-5">
+        <div class="col-lg-8 offset-lg-2">
+          <h3 class="text-white">Add a beer</h3>
+          <div id="add-beer-alert"></div>
+          <form id="beer-form" class="needs-validation" novalidate>
+            <div class="form-group">
+              <label class="text-white" for="brandInput">Brewery or Brand</label>
+              <input type="text" name="brand" class="form-control w-100" id="brandInput" placeholder="Brewery or Brand" required>
+              <div class="invalid-feedback">
+                  Please enter a brewery or brand.
+              </div>
+              <label class="text-white mt-5" for="beerInput">Beer name</label>
+              <input type="text" name="beer" class="form-control w-100" id="beerInput" placeholder="Add a beer" required>
+              <div class="invalid-feedback">
+                  Please enter the beer name.
+              </div>
+              <label class="text-white mt-5" for="yearInput">Year</label>
+              <input type="text" name="year" class="form-control w-100" id="yearInput" placeholder="Year" required>
+              <div class="invalid-feedback">
+                  Please enter the beer year.
+              </div>
+              <div class="text-center mt-5">
+                <button id="addBeerSubmit" type="submit" class="btn btn-outline-warning btn-lg mb-4">Submit</button>
+              </div>
+            </div>
+          </form> 
+        </div>
+        <!-- Sorting menu -->
+        <div class="container my-5">
+            <div class="btn-group d-flex justify-content-center align-items-center" role="group" aria-label="Sorting button group">
+              <div class="btn btn-outline-warning sort-age">Sort by Age</div>
+              <div class="btn btn-outline-warning sort-name">Sort by Name</div>
+              <div class="btn btn-outline-warning sort-qty">Sort by Quantity</div>
+              <div class="btn btn-outline-warning sort-brand">Sort by Brewery</div>
+            </div>
+        </div>
+        <!-- beer list -->
+        <div class="container min-vh-100">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="d-flex justify-content-center">
+                  <div id="listLoader" class="spinner-border text-warning" role="status">
+                      <span class="sr-only">Loading...</span>
+                  </div>
+              </div>
+              <ul class="list-group beer-ul dash-ul">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="p-4 h-auto">
+        <div class="container">
+            <div class="row p-4 footer-row my-5">
+                <div class="col-lg-3">
+                    <a class="text-white" href="/">My<span class="text-warning"Craft</span>Cellar<i class="fas fa-beer logo text-warning ml-2"></i></a>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <i class="fab fa-linkedin text-white m-2"></i>
+                    <i class="fab fa-github-square text-white m-2"></i>
+                    <ul class="list-unstyled text-white">
+                        <li class="text-uppercase text-success pb-2">Our App</li>
+                        <li><a href="/logout" role="button">Log out</a></li>
+                        <li>Messenger</li>
+                        <li>Profile</li>
+                        <li>Photos</li>
+                    </ul>
+                </div>
+                <!-- I'm weird -->
+                <div class="col-lg-2 offset-lg-1">
+
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <ul class="list-unstyled text-white">
+                        <li class="text-uppercase text-success pb-2">Menu</li>
+                        <li>Beers</li>
+                        <li>Cellaring</li>
+                        <li>Something</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                  
+            </div>
+        </div>
+    </footer>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="confirm-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Hold up!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure you drank the last one?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+          <button type="button" id="confirmed" class="btn btn-warning">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha384-JUMjoW8OzDJw4oFpWIB2Bu/c6768ObEthBMVSiIx4ruBIEdyNSUQAjJNFqT5pnJ6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

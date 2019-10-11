@@ -1,6 +1,6 @@
 // THIS CODE RUNS IN THE BROWSER
 
-var beerAPIurl = "http://localhost:3000/beer"
+var beerAPIurl = "https://mycraftcellar.herokuapp.com/beer"
 
 //READ
 $(document).ready(function(){

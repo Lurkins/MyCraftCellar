@@ -22,7 +22,7 @@ $(document).ready(function(){
                         <div class="quantity-box"><i class="fas fa-beer text-warning beer-qty-icon mr-3"></i><i class="fas fa-times mr-3"></i>${beer.quantity}</div>
                     </div>  
                     <div class="btn btn-warning p-2 beerMe" data-toggle="modal" data-target="#exampleModalCenter">
-                        <div class="beer-me-text">Beer Me</div>
+                        <div class="beer-me-text">Select Beer</div>
                     </div>
                 </li>`
             )
@@ -59,7 +59,7 @@ $('.sort-age').on('click', function() {
                         <div class="quantity-box"><i class="fas fa-beer text-warning beer-qty-icon mr-3"></i><i class="fas fa-times mr-3"></i>${beer.quantity}</div>
                     </div>  
                     <div class="btn btn-warning p-2 beerMe" data-toggle="modal" data-target="#exampleModalCenter">
-                        <div class="beer-me-text">Beer Me</div>
+                        <div class="beer-me-text">Select Beer</div>
                     </div>
                 </li>`
             )
@@ -96,7 +96,7 @@ $('.sort-name').on('click', function() {
                         <div class="quantity-box"><i class="fas fa-beer text-warning beer-qty-icon mr-3"></i><i class="fas fa-times mr-3"></i>${beer.quantity}</div>
                     </div>  
                     <div class="btn btn-warning p-2 beerMe" data-toggle="modal" data-target="#exampleModalCenter">
-                        <div class="beer-me-text">Beer Me</div>
+                        <div class="beer-me-text">Select Beer</div>
                     </div>
                 </li>`
             )
@@ -133,7 +133,7 @@ $('.sort-brand').on('click', function() {
                         <div class="quantity-box"><i class="fas fa-beer text-warning beer-qty-icon mr-3"></i><i class="fas fa-times mr-3"></i>${beer.quantity}</div>
                     </div>  
                     <div class="btn btn-warning p-2 beerMe" data-toggle="modal" data-target="#exampleModalCenter">
-                        <div class="beer-me-text">Beer Me</div>
+                        <div class="beer-me-text">Select Beer</div>
                     </div>
                 </li>`
             )
@@ -170,7 +170,7 @@ $('.sort-qty').on('click', function() {
                         <div class="quantity-box"><i class="fas fa-beer text-warning beer-qty-icon mr-3"></i><i class="fas fa-times mr-3"></i>${beer.quantity}</div>
                     </div>  
                     <div class="btn btn-warning p-2 beerMe" data-toggle="modal" data-target="#exampleModalCenter">
-                        <div class="beer-me-text">Beer Me</div>
+                        <div class="beer-me-text">Select Beer</div>
                     </div>
                 </li>`
             )

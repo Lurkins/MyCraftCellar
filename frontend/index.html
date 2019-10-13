@@ -20,11 +20,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <form id="login-form" class="needs-validation form-inline d-flex justify-content-end mt-2" action="/login" method="POST" novalidate>
-                    <input id="login-username" class="form-control mr-sm-2 mb-2 mb-sm-0 d-block" type="text" name="username" placeholder="admin ID" aria-label="admin ID" required>
+                    <input id="login-username" class="form-control mr-sm-2 mb-2 mb-sm-0 d-block" type="text" name="username" placeholder="Admin ID" aria-label="admin ID" required>
                     <div class="valid-feedback">
                         Please enter admin login.
                     </div>
-                    <input id="login-password" class="form-control mr-sm-2 d-block" type="password" name="password" placeholder="password" required>
+                    <input id="login-password" class="form-control mr-sm-2 d-block" type="password" name="password" placeholder="Password" required>
                     <div class="valid-feedback">
                         Please enter admin password.
                     </div>
@@ -73,30 +73,6 @@
                     <div class="col-lg-3">
                         <a class="text-white" href="/">My<span class="text-warning">Craft</span>Cellar<i class="fas fa-beer text-warning ml-2"></i></a>
                     </div>
-                    <!-- <div class="col-lg-2 offset-lg-1">
-                            <i class="fab fa-linkedin text-white m-2"></i>
-                            <i class="fab fa-github-square text-white m-2"></i>
-                        <ul class="list-unstyled text-white">
-                            <li class="text-uppercase text-success pb-2">Our App</li>
-                            <li><a href="/dashboard">Dashboard</a></li>
-                            <li>Messenger</li>
-                            <li>Profile</li>
-                            <li>Photos</li>
-                        </ul>
-                    </div> -->
-                    
-                    <!-- <div class="col-lg-2 offset-lg-1">
-
-                    </div> -->
-                    <!-- <div class="col-lg-2 offset-lg-1">
-                        <ul class="list-unstyled text-white">
-                            <li class="text-uppercase text-success pb-2">Menu</li>
-                            <li>Beers</li>
-                            <li>Cellaring</li>
-                            <li>Something</li>
-                            <li>Contact</li>
-                        </ul>
-                    </div> -->
                 </div>
             </div>
         </footer>
@@ -105,32 +81,34 @@
         <div class="modal fade" id="contactFormModal" tabindex="-1" role="dialog" aria-labelledby="contactFormModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content bg-black text-white">
-                    <div class="modal-header">
-                        <h5 class="modal-title w-100" id="modalHeadline"></h5>
+                    <div class="modal-header border-bottom-0">
+                        <h4 class="text-warning">Send me a message</h4>
+                        
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span class="text-secondary" aria-hidden="true">&times;</span>
                         </button>
+                        
                     </div>
+                    <h5 class="modal-title mb-2 mx-3" id="modalHeadline"></h5>
                     <div class="modal-body">
-                        <h6 class="my-3 text-warning">Send me a message!</h6>
                         <form id="contactForm" class="needs-validation" novalidate>
                             <div class="form-group">
-                                <label for="name">Name</label>
-                                <input name="name" type="text" class="form-control msg-form-entry" id="name" placeholder="Enter name" required>
+                                <label class="text-warning" for="name">Name</label>
+                                <input name="name" type="text" class="form-control msg-form-entry" id="name" placeholder="Enter your name" required>
                                 <div class="invalid-feedback">
                                     Please enter your name.
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email address</label>
-                                <input name="email" type="email" class="form-control msg-form-entry" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                                <label class="text-warning" for="email">Email address</label>
+                                <input name="email" type="email" class="form-control msg-form-entry" id="email" aria-describedby="emailHelp" placeholder="Enter your email" required>
                                 <div class="invalid-feedback">
                                     Please enter a valid email.
                                 </div>
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
-                                <label for="message">Message</label>
+                                <label class="text-warning" for="message">Message</label>
                                 <textarea name="message" class="form-control msg-form-entry" id="message" rows="3" required></textarea>
                                 <div class="invalid-feedback">
                                     Please enter a message.
@@ -141,7 +119,7 @@
                             <button id="contactformSubmit" type="submit" class="btn btn-warning msg-form-entry">Submit</button>
                         </form>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer border-top-0">
                     </div>
                 </div>
             </div>

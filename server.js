@@ -295,19 +295,19 @@ app.post('/send', function(req, res, next) {
   })
 
 //Sign up - POST
-app.post("/signup", function(req, res) {
-    var newUser = new User({username: req.body.username});
-    User.register(newUser, req.body.password, function(err, user){
-        if(err){
-            console.log(err);
-            return res.send(err)
-        } else {
-            passport.authenticate("local")(req, res, function(){
-                res.redirect("/dashboard");
-            });
-        }
-    })
-});
+// app.post("/signup", function(req, res) {
+//     var newUser = new User({username: req.body.username});
+//     User.register(newUser, req.body.password, function(err, user){
+//         if(err){
+//             console.log(err);
+//             return res.send(err)
+//         } else {
+//             passport.authenticate("local")(req, res, function(){
+//                 res.redirect("/dashboard");
+//             });
+//         }
+//     })
+// });
 
 //Login - POST
 app.post('/login', function(req, res, next) {
